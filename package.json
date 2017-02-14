@@ -1,0 +1,20 @@
+{
+  "name": "basic-dash-setup",
+  "version": "1.0.0",
+  "description": "Provides an example of a simple DASH client and server",
+  "scripts": {
+    "server": "npm run serve-content & npm run serve-client",
+    "serve-content": "http-server video_segments",
+    "serve-client" : "http-server client_app -o" 
+  },
+  "keywords": [
+    "DASH",
+    "video",
+    "streaming"
+  ],
+  "author": "Sanborn Hilland",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "git+ssh://git@github.com/sanbornhilland/http-server.git"
+  }
+}
