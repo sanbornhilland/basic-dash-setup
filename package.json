@@ -4,8 +4,8 @@
   "description": "Provides an example of a simple DASH client and server",
   "scripts": {
     "server": "npm run serve-content & npm run serve-client",
-    "serve-content": "http-server video_segments",
-    "serve-client" : "http-server client_app -o" 
+    "serve-content": "http-server video_segments -p8082",
+    "serve-client": "http-server . -p8081 -o"
   },
   "keywords": [
     "DASH",
@@ -15,6 +15,7 @@
   "author": "Sanborn Hilland",
   "license": "ISC",
   "dependencies": {
-    "http-server": "git+ssh://git@github.com/sanbornhilland/http-server.git"
+    "http-server": "git+ssh://git@github.com/sanbornhilland/http-server.git",
+    "shaka-player": "^2.0.5"
   }
 }

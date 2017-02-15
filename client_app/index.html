@@ -4,6 +4,21 @@
 	<title>Dash Client</title>
 </head>
 <body>
+  <video id="main-video" controls autoplay width="640"></video>
 
+  <!-- Load the DASH player -->
+  <script src="/node_modules/shaka-player/dist/shaka-player.compiled.js"></script>
+
+  <script type="text/javascript">
+    shaka.polyfill.installAll();
+
+    var testAsset = 'http://demo.yospace.com/quickplay/dash/vod.mpd';
+
+    var video = document.querySelector('#main-video');
+
+    var player = new shaka.Player(video);
+
+    player.load(testAsset);
+  </script>
 </body>
 </html>
